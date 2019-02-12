@@ -1,0 +1,19 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered-bottom {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-40 {
+	margin-top: 40px;
+}
