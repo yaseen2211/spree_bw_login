@@ -11,7 +11,7 @@ Introduction goes here.
   ```
 
   ```ruby
-  gem 'spree_bw_login', github: '[your-github-handle]/spree_bw_login'
+  gem 'spree_bw_login', github: 'omairrazam/spree_bw_login'
   ```
 
 2. Install the gem using Bundler:
