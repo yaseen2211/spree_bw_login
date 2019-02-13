@@ -2,3 +2,15 @@
 Placeholder manifest file.
 the installer will append this file to the app vendored assets here: 'vendor/assets/stylesheets/spree/frontend/all.css'
 */
+
+
+.centered-bottom {
+  position: absolute;
+ 	left: 53%;
+    top: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.top-40 {
+	margin-top: 40px;
+}

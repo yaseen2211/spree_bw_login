@@ -13,6 +13,11 @@ module SpreeBwLogin
         inject_into_file 'vendor/assets/stylesheets/spree/backend/all.css', " *= require spree/backend/spree_bw_login\n", before: %r{\*\/}, verbose: true
       end
 
+      def load_seeds_files
+        SpreeBwLogin::Engine.load_seed
+      end
+
+
       def add_migrations
         run 'bundle exec rake railties:install:migrations FROM=spree_bw_login'
       end
