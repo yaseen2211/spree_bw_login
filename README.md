@@ -5,6 +5,11 @@ Introduction goes here.
 ## Installation
 
 1. Add this extension to your Gemfile with this line:
+
+  ```ruby
+  gem 'spree_chimpy', github: 'yaseen2211/spree_chimpy', branch: 'master'
+  ```
+
   ```ruby
   gem 'spree_bw_login', github: '[your-github-handle]/spree_bw_login'
   ```
@@ -15,6 +20,9 @@ Introduction goes here.
   ```
 
 3. Copy & run migrations
+```ruby
+  bundle exec rails g spree_chimpy:install
+  ```
   ```ruby
   bundle exec rails g spree_bw_login:install
   ```

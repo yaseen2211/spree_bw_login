@@ -5,17 +5,12 @@
 <% register_label_contents = register_contents.from_gen_slug('register-label') %>
 <% register_btn_label_contents = register_contents.from_gen_slug('register-btn-label') %>
 <% register_main_contents = register_contents.from_gen_slug('register-main') %>
-
-
-
 <% register_top_content = register_main_contents.spec_slug('register-main-heading-desc').last%>
-
 <% register_mailing_content = register_label_contents.spec_slug('register-label-mailig-list').last%>
 <% register_policy_content = register_label_contents.spec_slug('register-label-privacy').last%>
 <% register_terms_content = register_label_contents.spec_slug('register-label-terms').last%>
 <% register_account_content = register_label_contents.spec_slug('register-label-login').last%>
 <% register_benifits_content = register_label_contents.spec_slug('register-label-benifits').last%>
-
 <% register_privacy_btn_content = register_btn_label_contents.spec_slug('register-btn-label-privacy').last%>
 <% register_account_btn_content = register_btn_label_contents.spec_slug('register-btn-label-account').last%>
 <% register_terms_btn_content = register_btn_label_contents.spec_slug('register-btn-label-terms').last%>
@@ -24,6 +19,7 @@
 <% register_google_btn_content = register_btn_label_contents.spec_slug('register-btn-label-google').last%>
 
 
+<%= link_to "Want to manage a Store?", new_store_request_path, class: "btn btn-success" %>
 <div class="text-center">
   <h1 class="text-center "><%= register_top_content.try(:title) %></h1>
 </div>
@@ -34,9 +30,12 @@
       <%= form_for resource, :as => :spree_user, :url => spree.registration_path do |f| %>
         <div data-hook="signup_inside_form">
           <%= render :partial => 'spree/shared/user_form', :locals => { :f => f } %>
-          <input type="checkbox" name="subscribe-me"><%= register_mailing_content.try(:title) + " " + register_policy_content.try(:title)%> <%= link_to register_privacy_btn_content.try(:title) , privacy_policies_path,target: "_blank"%>
-          <br>
-          <br>
+          <div id="user-subscribe-container">
+            <p>
+              <%= f.check_box :subscribed %>
+              <%= register_mailing_content.try(:title) + " " + register_policy_content.try(:title)%> <%= link_to register_privacy_btn_content.try(:title) , privacy_policies_path,target: "_blank"%>
+            </p>
+          </div>
           <div><%= f.submit register_account_btn_content.try(:title), :class => 'btn btn-lg btn-success btn-block' %></div>
           <br>
           <p><%= register_terms_content.try(:title) %>  <%= link_to register_terms_btn_content.try(:title), terms_and_conditions_path, target: "_blank" %></p>
@@ -56,13 +55,17 @@
   </div>
 </div>
 <div class="col-md-6">
-  <div class="container">
-  	<%#= image_tag(main_app.url_for(variant.images.first.url(:small)))%>
-	  <img src="https://2.bp.blogspot.com/-Lw6_8tyHmxU/TszH406nMBI/AAAAAAAAHJM/52pWF9O9gzI/s1600/levis-logo.jpg" alt="Snow">
+  <div >
+    <%if register_benifits_content.image.attached? %>
+  	 <%= image_tag(main_app.url_for(register_benifits_content.image.variant(resize: '600x400'))) %>
+    <% else %>
+	   <img src="http://www.rangerwoodperiyar.com/images/joomlart/demo/default.jpg" alt="Registeration Benifits Image" height="400" width="600">
+    <% end%>
 	  <div class="centered-bottom"><%= register_benifits_content.try(:title)%></div>
 	</div>
 	<div class="top-40">
 	<p><%= register_benifits_content.try(:description)%></p>
 </div>
 </div>
+
 

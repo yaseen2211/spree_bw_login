@@ -1,4 +1,4 @@
-class Spree::SitePoliciesController < ApplicationController
+class Spree::SitePoliciesController < Spree::StoreController
   def terms
   end
 
