@@ -13,7 +13,7 @@
   <div class="col-md-6 well">
   
     <div class="form-group">
-      <%= form.label :contact_name %>
+      <%= form.label :contact_name %> *
       <%= form.text_field :contact_name , class: "form-control", placeholder: "Enter Your Name", required: true%>
     </div>
 
@@ -23,26 +23,26 @@
     </div>
 
     <div class="form-group">
-      <%= form.label :contact_email_address %>
+      <label>Contact Email Address *</label>
       <%= form.email_field :contact_email_address , class: "form-control", placeholder: "Enter Your Email Address", required: true%>
     </div>
 
      <div class="form-group">
-      <%= form.label :store_name %>
+      <%= form.label :store_name %> *
       <%= form.text_field :store_name, class: "form-control", placeholder: "Enter Your Store" , required: true%>
     </div>
     <div class="form-group">
-      <%= form.label :store_number %>
+      <%= form.label :store_number %> *
       <%= form.text_field :store_number, class: "form-control" , placeholder: "Enter Your Store Number", required: true%>
     </div>
 
     <div class="form-group">
-      <%= form.label :store_email_address %>
+      <%= form.label :store_email_address %> *
       <%= form.email_field :store_email_address , class: "form-control" , placeholder: "Enter Store Email Address", required: true%>
     </div>
 
     <div class="form-group">
-      <%= form.label :store_address %>
+      <%= form.label :store_address %> *
       <%= form.text_field :store_address , class: "form-control", placeholder: "Enter Store Physical Address", required: true%>
     </div>
 
@@ -61,8 +61,8 @@
     </div>
 
     <div class="form-group">
-      <%= form.label :store_desr %>
-      <%= form.text_field :store_desr, class: "form-control", placeholder: "Enter Store Description" %>
+      <%= form.label :store_desr %> *
+      <%= form.text_field :store_desr, class: "form-control", placeholder: "Enter Store Description" , required: true%>
     </div>
 
     <div class="form-group">
@@ -71,12 +71,12 @@
     </div>
 
     <div class="form-group">
-      <%= form.label :store_main_img %>
+      <%= form.label :store_main_img %> *
       <%= form.file_field :store_main_img , class: "form-control", required: true%>
     </div>
 
     <div class="form-group">
-      <%= form.label :store_logo %>
+      <%= form.label :store_logo %> *
       <%= form.file_field :store_logo, class: "form-control", required: true %>
     </div>
 
