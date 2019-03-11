@@ -18,6 +18,7 @@
 <% register_facebook_btn_content = register_btn_label_contents.spec_slug('register-btn-label-facebook').last%>
 <% register_google_btn_content = register_btn_label_contents.spec_slug('register-btn-label-google').last%>
 
+<% register_advertsment_label = register_label_contents.spec_slug('register-label-advertisement').last%>
 
 <%= link_to "Want to manage a Store?", new_store_request_path, class: "btn btn-success" %>
 <div class="text-center">
@@ -66,6 +67,15 @@
 	<div class="top-40">
 	<p><%= register_benifits_content.try(:description)%></p>
 </div>
+</div>
+
+<div class="col-md-12" >
+  <p><%= register_advertsment_label.try(:title)%></p>
+  <%if register_advertsment_label.image.attached? %>
+   <%= image_tag(main_app.url_for(register_advertsment_label.image), height: "60px", width: "100%") %>
+  <% else %>
+   <img src="https://us.123rf.com/450wm/gmast3r/gmast3r1706/gmast3r170600861/80005056-cartoon-rabbit-sporty-running-carry-big-horizontal-advertisement-banner-with-copy-space-flat-vector-.jpg" width="100%" height="172">
+  <% end%>
 </div>
 
 

@@ -12,3 +12,6 @@ Spree::PageContent.find_or_create_by! title: "Terms and Conditions", description
 Spree::PageContent.find_or_create_by! title: "Login", description: "", slug: "register-btn-label-login"
 Spree::PageContent.find_or_create_by! title: "Register with Facebook", description: "", slug: "register-btn-label-facebook"
 Spree::PageContent.find_or_create_by! title: "Register with Google", description: "", slug: "register-btn-label-google"
+
+
+Spree::PageContent.find_or_create_by! title: "Advertisement", description: "", slug: "register-label-advertisement"
