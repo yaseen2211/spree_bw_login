@@ -1,0 +1,25 @@
+<% store_request_msg_contents     = Spree::PageContent.from_gen_slug('store-request-message') %>
+<% store_request_msg_main_content      = store_request_msg_contents.spec_slug('store-request-message-main-heading-desc').last%>
+<% store_request_msg_para1_content     = store_request_msg_contents.spec_slug('store-request-message-paragraph-1').last%>
+<% store_request_msg_para2_content     = store_request_msg_contents.spec_slug('store-request-message-paragraph-2').last%>
+<% store_request_msg_advertsment_label = store_request_msg_contents.spec_slug('store-request-message-label-advertisement').last%>
+
+<div class="text-center">
+  <h1 class="text-center "><%= store_request_msg_main_content.try(:title)%></h1>
+</div>
+<hr>
+
+<div>
+	<p><%= vendor_request.try(:contact_name) %> <%= store_request_msg_para1_content.try(:description)%></p>
+	<p><%= store_request_msg_para2_content.try(:description)%></p>
+</div>
+
+
+
+<%if store_request_msg_advertsment_label.image.attached? %>
+  <div class="col-md-12" >
+    <p><%= store_request_msg_advertsment_label.try(:title)%></p>
+    <%= image_tag(main_app.url_for(store_request_msg_advertsment_label.image), height: "60px", width: "100%") %>
+  </div>
+<% end%>
+

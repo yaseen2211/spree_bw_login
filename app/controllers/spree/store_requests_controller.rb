@@ -24,7 +24,7 @@ class Spree::StoreRequestsController < Spree::StoreController
     @spree_store_request = Spree::StoreRequest.new(store_request_params)
 
     if @spree_store_request.save
-      redirect_to root_path, notice: 'Your request for personal store is created successfully. Admin will contact you soon.Thanks'
+      render(:template => 'spree/store_requests/thanks_to_vendor', :locals => {vendor_request: @spree_store_request})  
     else
       render :new
     end
@@ -44,6 +44,11 @@ class Spree::StoreRequestsController < Spree::StoreController
   #   @spree_store_request.destroy
   #   redirect_to spree_store_requests_url, notice: 'Store request was successfully destroyed.'
   # end
+
+
+  def thanks_to_vendor
+
+  end
 
   private
     # # Use callbacks to share common setup or constraints between actions.
