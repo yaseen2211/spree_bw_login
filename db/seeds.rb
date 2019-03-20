@@ -15,3 +15,6 @@ Spree::PageContent.find_or_create_by! title: "Register with Google", description
 
 
 Spree::PageContent.find_or_create_by! title: "Advertisement", description: "", slug: "register-label-advertisement"
+Spree::PageContent.find_or_create_by! title: "Make Your Digital Home Black Line Now", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ", slug: "store-request-main-heading-desc"
+Spree::PageContent.find_or_create_by! title: "Advertisement", description: "", slug: "store-request-label-advertisement"
+Spree::PageContent.find_or_create_by! title: " Just Some of the benifits  For Store Request", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum h", slug: "store-request-label-benifits"

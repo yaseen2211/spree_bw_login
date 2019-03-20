@@ -1,93 +1,96 @@
-<%= form_with(model: spree_store_request, local: true) do |form| %>
-    <% if spree_store_request.errors.any? %>
-      <div class="alert alert-danger"id="error_explanation">
-        <h2><%= pluralize(spree_store_request.errors.count, "error") %> prohibited this spree_store_request from being saved:</h2>
 
-        <ul>
-        <% spree_store_request.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
-  <div class="col-md-6 well">
+
+
+<div class="form-group">
+  <%= form.text_field :contact_name , class: "form-control", placeholder: "Please Enter Your Contact Name *", required: true%>
+</div>
+
+<div class="form-group">
+  <%= form.number_field :contact_number, class: "form-control", placeholder: "Please Provide a Contact Number *", required: true %>
+</div>
+
+<div class="form-group">
+  <%= form.email_field :contact_email_address , class: "form-control", placeholder: "Please Enter Your Email Address"%>
+</div>
+
+<div class="form-group">
+  <%= form.text_field :store_name, class: "form-control", placeholder: "Please Tell Us The Name of Your Store or Brand *" , required: true%>
+</div> 
+
+<div class="form-group">
+  <%= form.text_field :store_web_url , class: "form-control", placeholder: "Please Enter Your Website Address if You Have One "%>
+</div>
+
+
+<div class="form-group">
+  <%= form.text_field :store_social_media , class: "form-control", placeholder: "Please Enter A Social Media Account if You Have One."%>
+</div>
+
+
+
+
+
+
+  <!-- <div class="col-md-6 well"> -->
   
-    <div class="form-group">
-      <%= form.label :contact_name %> *
-      <%= form.text_field :contact_name , class: "form-control", placeholder: "Enter Your Name", required: true%>
-    </div>
+    
 
-    <div class="form-group">
-      <%= form.label :contact_number %>
-      <%= form.text_field :contact_number, class: "form-control", placeholder: "Enter Your Number" %>
-    </div>
-
-    <div class="form-group">
-      <label>Contact Email Address *</label>
-      <%= form.email_field :contact_email_address , class: "form-control", placeholder: "Enter Your Email Address", required: true%>
-    </div>
-
-     <div class="form-group">
-      <%= form.label :store_name %> *
-      <%= form.text_field :store_name, class: "form-control", placeholder: "Enter Your Store" , required: true%>
-    </div>
-    <div class="form-group">
-      <%= form.label :store_number %> *
-      <%= form.text_field :store_number, class: "form-control" , placeholder: "Enter Your Store Number", required: true%>
-    </div>
-
-    <div class="form-group">
-      <%= form.label :store_email_address %> *
-      <%= form.email_field :store_email_address , class: "form-control" , placeholder: "Enter Store Email Address", required: true%>
-    </div>
-
-    <div class="form-group">
-      <%= form.label :store_address %> *
-      <%= form.text_field :store_address , class: "form-control", placeholder: "Enter Store Physical Address", required: true%>
-    </div>
-
+  <!-- <div class="form-group">
+    <%#= form.label :store_desr %> *
+    <%#= form.text_field :store_desr, class: "form-control", placeholder: "Enter Store Description" , required: true%>
   </div>
+ -->
 
-  <div class="col-md-6 well">
-
-    <div class="form-group">
-      <%= form.label :store_open_hours %>
-      <%= form.time_field :store_open_hours , class: "form-control", placeholder: "Enter Store Opening Hours"%>
+     <!-- <div class="form-group">
+      <%#= form.label :store_name %> *
+      <%#= form.text_field :store_name, class: "form-control", placeholder: "Enter Your Store" , required: true%>
+    </div> -->
+   <!--  <div class="form-group">
+      <%#= form.label :store_number %> *
+      <%#= form.text_field :store_number, class: "form-control" , placeholder: "Enter Your Store Number", required: true%>
     </div>
 
     <div class="form-group">
-      <%= form.label :store_social_media %>
-      <%= form.text_field :store_social_media , class: "form-control", placeholder: "Enter Store Social Media Link"%>
+      <%#= form.label :store_email_address %> *
+      <%#= form.email_field :store_email_address , class: "form-control" , placeholder: "Enter Store Email Address", required: true%>
     </div>
 
     <div class="form-group">
-      <%= form.label :store_desr %> *
-      <%= form.text_field :store_desr, class: "form-control", placeholder: "Enter Store Description" , required: true%>
+      <%#= form.label :store_address %> *
+      <%#= form.text_field :store_address , class: "form-control", placeholder: "Enter Store Physical Address", required: true%>
+    </div>
+
+  </div> -->
+
+  <!-- <div class="col-md-6 well"> -->
+
+    <!-- <div class="form-group">
+      <%#= form.label :store_open_hours %>
+      <%#= form.time_field :store_open_hours , class: "form-control", placeholder: "Enter Store Opening Hours"%>
+    </div>
+ -->
+    
+
+    <!-- <div class="form-group">
+      <%#= form.label :store_tags %>
+      <%#= form.text_field :store_tags, class: "form-control", placeholder: "Please privde tags for store" %>
     </div>
 
     <div class="form-group">
-      <%= form.label :store_tags %>
-      <%= form.text_field :store_tags, class: "form-control", placeholder: "Please privde tags for store" %>
+      <%#= form.label :store_main_img %> *
+      <%#= form.file_field :store_main_img , class: "form-control", required: true%>
     </div>
 
     <div class="form-group">
-      <%= form.label :store_main_img %> *
-      <%= form.file_field :store_main_img , class: "form-control", required: true%>
+      <%#= form.label :store_logo %> *
+      <%#= form.file_field :store_logo, class: "form-control", required: true %>
     </div>
 
     <div class="form-group">
-      <%= form.label :store_logo %> *
-      <%= form.file_field :store_logo, class: "form-control", required: true %>
-    </div>
+      <%#= form.label :store_list_image %>
+      <%#= form.file_field :store_list_image , class: "form-control"%>
+    </div> -->
+  <!-- </div> -->
 
-    <div class="form-group">
-      <%= form.label :store_list_image %>
-      <%= form.file_field :store_list_image , class: "form-control"%>
-    </div>
-  </div>
+  
 
-  <div class="actions text-center clearfix" style="margin-bottom: 5px;">
-    <%= form.submit "Create Request", class: "btn btn-success" %>
-  </div>
-
- <% end %>

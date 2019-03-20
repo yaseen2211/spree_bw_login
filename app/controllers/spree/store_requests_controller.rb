@@ -53,6 +53,6 @@ class Spree::StoreRequestsController < Spree::StoreController
 
     # Only allow a trusted parameter "white list" through.
     def store_request_params
-      params.require(:store_request).permit(:store_name, :contact_name, :contact_number, :contact_email_address, :store_number, :store_email_address, :store_address, :store_open_hours, :store_social_media, :store_desr, :store_tags, :store_main_img, :store_logo, :store_list_image)
+      params.require(:store_request).permit(:store_name, :contact_name, :contact_number, :contact_email_address, :store_number, :store_email_address, :store_address, :store_open_hours, :store_social_media, :store_desr, :store_tags, :store_main_img, :store_logo, :store_list_image,:store_web_url)
     end
 end
