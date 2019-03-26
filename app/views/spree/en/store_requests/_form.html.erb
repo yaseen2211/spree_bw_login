@@ -1,0 +1,100 @@
+
+
+<div class="form-row">
+  <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
+    <label for="validationCustom01">Contact Name</label>
+    <%= form.text_field :contact_name , class: "form-control",id: "validationCustom01", placeholder: "Enter Your Contact Name*", required: true%>   
+  </div>
+  <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
+    <label for="validationCustom02">Contact Number</label>
+    <%= form.number_field :contact_number, class: "form-control",id: "validationCustom02", placeholder: "Provide a Contact Number*", required: true %>    
+  </div>
+  
+  <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
+    <label for="validationCustom02">Email</label>
+    <%= form.email_field :contact_email_address , class: "form-control", id: "validationCustom02",placeholder: "Enter Your Email Address *", required: true%>    
+  </div>
+  
+  <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
+    <label for="validationCustom02">Store Namer / Brand</label>
+    <%= form.text_field :store_name, class: "form-control", id: "validationCustom02", placeholder: "Tell Us The Name of Your Store or Brand*" , required: true%>    
+  </div>
+  
+  <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
+    <label for="">Website</label>
+    <%= form.text_field :store_web_url , class: "form-control", id: "",placeholder: "Enter Your Website Address if You Have One "%>      
+  </div>
+  
+  <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
+    <label for="validationCustom02">Social Media</label>
+     <%= form.text_field :store_social_media , class: "form-control",id: "validationCustom02", placeholder: "Enter A Social Media Account if You Have One"%> 
+     <%= hidden_field_tag "lang", "en" %>      
+  </div>
+
+  
+</div>
+
+
+  <!-- <div class="col-md-6 well"> -->
+  
+    
+
+  <!-- <div class="form-group">
+    <%#= form.label :store_desr %> *
+    <%#= form.text_field :store_desr, class: "form-control", placeholder: "Enter Store Description" , required: true%>
+  </div>
+ -->
+
+     <!-- <div class="form-group">
+      <%#= form.label :store_name %> *
+      <%#= form.text_field :store_name, class: "form-control", placeholder: "Enter Your Store" , required: true%>
+    </div> -->
+   <!--  <div class="form-group">
+      <%#= form.label :store_number %> *
+      <%#= form.text_field :store_number, class: "form-control" , placeholder: "Enter Your Store Number", required: true%>
+    </div>
+
+    <div class="form-group">
+      <%#= form.label :store_email_address %> *
+      <%#= form.email_field :store_email_address , class: "form-control" , placeholder: "Enter Store Email Address", required: true%>
+    </div>
+
+    <div class="form-group">
+      <%#= form.label :store_address %> *
+      <%#= form.text_field :store_address , class: "form-control", placeholder: "Enter Store Physical Address", required: true%>
+    </div>
+
+  </div> -->
+
+  <!-- <div class="col-md-6 well"> -->
+
+    <!-- <div class="form-group">
+      <%#= form.label :store_open_hours %>
+      <%#= form.time_field :store_open_hours , class: "form-control", placeholder: "Enter Store Opening Hours"%>
+    </div>
+ -->
+    
+
+    <!-- <div class="form-group">
+      <%#= form.label :store_tags %>
+      <%#= form.text_field :store_tags, class: "form-control", placeholder: "Please privde tags for store" %>
+    </div>
+
+    <div class="form-group">
+      <%#= form.label :store_main_img %> *
+      <%#= form.file_field :store_main_img , class: "form-control", required: true%>
+    </div>
+
+    <div class="form-group">
+      <%#= form.label :store_logo %> *
+      <%#= form.file_field :store_logo, class: "form-control", required: true %>
+    </div>
+
+    <div class="form-group">
+      <%#= form.label :store_list_image %>
+      <%#= form.file_field :store_list_image , class: "form-control"%>
+    </div> -->
+  <!-- </div> -->
+
+  
+

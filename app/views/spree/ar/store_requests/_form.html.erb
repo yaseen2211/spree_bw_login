@@ -1,35 +1,36 @@
+<div class="form-row">
+  <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
+    <label for="validationCustom01">ﻦﻔﺴﻟﺍ </label>
+    <%= form.text_field :contact_name , class: "form-control",id: "validationCustom01", placeholder: "أبوظبي. ومن خلال الشراكة مع", required: true%>
+  </div>
+  <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
+    <label for="validationCustom02">ﻦﻔﺴﻟﺍ </label>
+    <%= form.number_field :contact_number, class: "form-control",id: "validationCustom02", placeholder: "أبوظبي. ومن خلال الشراكة مع", required: true %>         
+  </div>
+  
+  <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
+    <label for="validationCustom02">ﻦﻔﺴﻟﺍ </label>
+    <%= form.email_field :contact_email_address , class: "form-control", id: "validationCustom02",placeholder: "أبوظبي. ومن خلال الشراكة مع", required: true%>       
+  </div>
+  
+  <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
+    <label for="validationCustom02">ﻦﻔﺴﻟﺍ </label>
+     <%= form.text_field :store_name, class: "form-control", id: "validationCustom02", placeholder: "أبوظبي. ومن خلال الشراكة مع"  , required: true%>      
+  </div>
+  
+  <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
+    <label for="validationCustom02">ﻦﻔﺴﻟﺍ </label>
+    <%= form.text_field :store_web_url , class: "form-control", id: "validationCustom02",placeholder: "أبوظبي. ومن خلال الشراكة مع"%>      
 
+  </div>
 
-
-<div class="form-group">
-  <%= form.text_field :contact_name , class: "form-control", placeholder: "Please Enter Your Contact Name *", required: true%>
+  <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
+    <label for="validationCustom02">ﻦﻔﺴﻟﺍ </label>
+    <%= form.text_field :store_social_media , class: "form-control",id: "validationCustom02", placeholder: "أبوظبي. ومن خلال الشراكة مع" %>
+    <%= hidden_field_tag "lang", "ar" %> 
+  </div>
+  
 </div>
-
-<div class="form-group">
-  <%= form.number_field :contact_number, class: "form-control", placeholder: "Please Provide a Contact Number *", required: true %>
-</div>
-
-<div class="form-group">
-  <%= form.email_field :contact_email_address , class: "form-control", placeholder: "Please Enter Your Email Address*", required: true%>
-</div>
-
-<div class="form-group">
-  <%= form.text_field :store_name, class: "form-control", placeholder: "Please Tell Us The Name of Your Store or Brand *" , required: true%>
-</div> 
-
-<div class="form-group">
-  <%= form.text_field :store_web_url , class: "form-control", placeholder: "Please Enter Your Website Address if You Have One "%>
-</div>
-
-
-<div class="form-group">
-  <%= form.text_field :store_social_media , class: "form-control", placeholder: "Please Enter A Social Media Account if You Have One."%>
-</div>
-
-
-
-
-
 
   <!-- <div class="col-md-6 well"> -->
   

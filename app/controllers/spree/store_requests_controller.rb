@@ -21,10 +21,11 @@ class Spree::StoreRequestsController < Spree::StoreController
 
   # POST /spree/store_requests
   def create
+
     @spree_store_request = Spree::StoreRequest.new(store_request_params)
 
     if @spree_store_request.save
-      render(:template => 'spree/store_requests/thanks_to_vendor', :locals => {vendor_request: @spree_store_request})  
+      render(:template => 'spree/' + (params[:lang].present? ? params[:lang].to_s : DEFAULT_VIEW_LANG) + '/store_requests/thanks_to_vendor', :locals => {vendor_request: @spree_store_request})  
     else
       render :new
     end
@@ -48,6 +49,10 @@ class Spree::StoreRequestsController < Spree::StoreController
 
   def thanks_to_vendor
 
+  end
+
+  def registeration_select_type
+    
   end
 
   private
