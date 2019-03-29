@@ -1,0 +1,114 @@
+<% @body_id = 'signup' %>
+
+<% register_contents     = Spree::PageContent.from_gen_slug('register') %>
+
+<% register_label_contents = register_contents.from_gen_slug('register-label') %>
+<% register_btn_label_contents = register_contents.from_gen_slug('register-btn-label') %>
+<% register_main_contents = register_contents.from_gen_slug('register-main') %>
+<% register_top_content = register_main_contents.spec_slug('register-main-heading-desc').last%>
+<% register_mailing_content = register_label_contents.spec_slug('register-label-mailig-list').last%>
+<% register_policy_content = register_label_contents.spec_slug('register-label-privacy').last%>
+<% register_terms_content = register_label_contents.spec_slug('register-label-terms').last%>
+<% register_account_content = register_label_contents.spec_slug('register-label-login').last%>
+<% register_benifits_content = register_label_contents.spec_slug('register-label-benifits').last%>
+<% register_privacy_btn_content = register_btn_label_contents.spec_slug('register-btn-label-privacy').last%>
+<% register_account_btn_content = register_btn_label_contents.spec_slug('register-btn-label-account').last%>
+<% register_terms_btn_content = register_btn_label_contents.spec_slug('register-btn-label-terms').last%>
+<% register_login_btn_content = register_btn_label_contents.spec_slug('register-btn-label-login').last%>
+<% register_facebook_btn_content = register_btn_label_contents.spec_slug('register-btn-label-facebook').last%>
+<% register_google_btn_content = register_btn_label_contents.spec_slug('register-btn-label-google').last%>
+<% register_advertsment_label = register_label_contents.spec_slug('register-label-advertisement').last%>
+
+
+<div class="clearfix"></div>
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @user } %>
+<div class="container">
+
+<div class="register_my_dv"  dir="rtl">
+  
+  <div class="main_register_title">
+  <h2><%= register_top_content.try(:title) %></h2>
+  </div>
+  
+ <div class="reg-my-account" dir="rtl">
+ 
+ <div class="col-lg-6 col-md-6 col-sm-6 just-sm" dir="rtl">
+  
+  <div class="img-reg">
+    <%if register_benifits_content.image.attached? %>
+        <%= image_tag(main_app.url_for(register_benifits_content.image.variant(resize: '401x145'))) %>
+      <% else %>
+         <%= image_tag "my-acc-ar.jpg", alt: "" %>
+      <% end%>
+    </div>
+    
+    <div class="culpa">
+    <ul class="non-dv">
+      <li><%= register_benifits_content.try(:title)%></li>
+     <li> <%= register_benifits_content.try(:description)%></li>
+    </ul>
+    </div>
+  
+ </div>
+ <div class="col-lg-6 col-md-6 col-sm-6 my-wrd"  dir="rtl">
+
+  <%= form_for resource, :as => :spree_user, :url => spree.registration_path, html: {:novalidate => true, class: "needs-validation news_frm my-frm-rgi"} do |f| %>
+
+    <%= render :partial => 'spree/ar/shared/user_form', :locals => { :f => f } %>
+
+    <div class="form-group col-md-12 col-sm-12 col-lg-12 fin_st p-0">
+      <div class="form-check item-set-con" id="user-subscribe-container">
+        <%= f.check_box :subscribed, class: "form-check-input" %>
+        <p class="">
+         <%= register_mailing_content.try(:title)%><br>
+        <%= link_to register_privacy_btn_content.try(:title) , privacy_policies_path,target: "_blank", class: "pol-out"%> <%= register_policy_content.try(:title)%>
+        </p>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="elit text-center yrt-input">
+      <%= f.submit register_account_btn_content.try(:title), :class => 'btn btn-primary btn-sm btn-sub-frm' %>
+    </div>
+    
+    
+    <div class="form-group col-md-12 col-sm-12 col-lg-12 fin_st p-0">
+      <div class="form-check item-set-con">
+        <p class="form-check-label clk_mt">
+          <%= register_terms_content.try(:title) %> <br>
+          <%= link_to register_terms_btn_content.try(:title), terms_and_conditions_path, target: "_blank" , class: "pol-out"%>
+
+        </p>
+           <p class="form-check-label clk_mt"> <%= link_to register_login_btn_content.try(:title), spree.login_path, target: "_blank", class: "pol-out" %><%= register_account_content.try(:title)%></p>
+      </div>
+    </div>
+
+  <% end %>
+<div class="clearfix"></div>
+  <div class="log_in_wth">
+ <ul>
+ <li><a href="#"><%= image_tag "face_book.png", alt: "" %></a></li>
+  <li><a href="#"><%= image_tag "goo_gle.png", alt: "" %></a></li>
+ </ul>
+  </div>
+ </div>
+ 
+ </div>
+  
+  </div>
+
+</div>
+
+
+<div class="clearfix"></div>
+
+<%if register_advertsment_label.image.attached? %>
+  <div class="adver-sec">
+    <div class="container">
+      <p><%= register_advertsment_label.try(:title)%></p>
+      <div class="adver-sec-mn">
+        <%= image_tag(main_app.url_for(register_advertsment_label.image), height: "127px", width: "1100px", class: "img-responsive") %>
+      </div>
+    </div>
+  </div>
+<% end%>
