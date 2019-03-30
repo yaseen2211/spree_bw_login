@@ -87,8 +87,15 @@
 <div class="clearfix"></div>
   <div class="log_in_wth">
  <ul>
- <li><a href="#"><%= image_tag "face_book.png", alt: "" %></a></li>
-  <li><a href="#"><%= image_tag "goo_gle.png", alt: "" %></a></li>
+ <% Spree::AuthenticationMethod.available_for(@spree_user).each do |method| %>
+    <li>
+      <%= link_to( image_tag("#{method.provider}_ar.png"),
+            polymorphic_url("spree_user_#{method.provider}_omniauth_authorize", provider: method.provider),
+            id:    method.provider.to_url,
+            title: Spree.t(:sign_in_with, provider: method.provider)) if method.active %>
+
+    </li>
+  <% end %>
  </ul>
   </div>
  </div>
