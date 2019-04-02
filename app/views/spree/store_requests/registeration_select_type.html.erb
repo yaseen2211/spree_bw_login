@@ -1,4 +1,6 @@
 <% lang = I18n.locale %>
+
+<% @register_select_adv_contents     = Spree::PageContent.from_gen_slug('register-select-label-advertisement').last %>
 <%= render template: "spree/#{lang.present? ? lang.to_s : DEFAULT_VIEW_LANG}/store_requests/registeration_select_type"%>
 
 

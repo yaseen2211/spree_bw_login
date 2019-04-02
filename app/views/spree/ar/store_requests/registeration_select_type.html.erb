@@ -33,10 +33,15 @@
 
 
 <div class="clearfix"></div>
-  <!--- advertise ment section start--->
-<div class="adver-sec">
-  <div class="container">
-    <div class="adver-sec-mn"><%= image_tag "advertize.jpg", alt: "", class: "img-responsive" %> </div>
+<%if @register_select_adv_contents.image.attached? %>
+  <div class="adver-sec">
+    <div class="container">
+      <div class="adver-sec-mn"> 
+        <p class="pull-right"><%= @register_select_adv_contents.try(:title)%></p>
+        <%= image_tag(main_app.url_for(@register_select_adv_contents.image), height: "127px", width: "1100px") %>
+      </div>
+    </div>
   </div>
-</div>
-  <!--- advertise ment section end--->
+<% end%>
+
+
