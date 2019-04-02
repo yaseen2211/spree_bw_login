@@ -1,3 +1,4 @@
-<%= render template: "spree/#{params[:lang].to_s.present? ? params[:lang].to_s : DEFAULT_VIEW_LANG}/store_requests/thanks_to_vendor", locals: {vendor_request: vendor_request} %>
+<% lang = I18n.locale %>
+<%= render template: "spree/#{lang.present? ? lang.to_s : DEFAULT_VIEW_LANG}/store_requests/thanks_to_vendor", locals: {vendor_request: vendor_request} %>
 
 
