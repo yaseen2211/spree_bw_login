@@ -15,6 +15,9 @@ module Spree
 		validates :contact_email_address, :presence => {:message     => "cant blank" }
 		
 		def send_thanku_email
+			if self.contact_email_address?
+				Spree::StoreRequestMailer.response_to_owner(self).deliver_now
+			end
 			Spree::StoreRequestMailer.store_request_thankyou(self).deliver_now
 		end
 
