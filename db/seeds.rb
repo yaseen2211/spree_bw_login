@@ -66,6 +66,63 @@ Spree::PageContent.find_or_create_by! title: "Black Line Privacy & Policy", desc
 Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "privacy-para1"
 Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "privacy-para2"
 
-
-
 Spree::PageContent.find_or_create_by! title: "Advertisement", description: "", slug: "register-select-label-advertisement"
+
+
+
+
+
+Spree::PageContent.find_or_create_by! title: "About Us", description: "", slug: "about-us-main_heading-desc"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "about-us-para1"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "about-us-para2"
+
+
+
+Spree::PageContent.find_or_create_by! title: "Gift Cards", description: "", slug: "gift_cards-main_heading-desc"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "gift_cards-para1"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "gift_cards-para2"
+
+
+
+Spree::PageContent.find_or_create_by! title: "Black Line Personal Services", description: "", slug: "personal_service-main_heading-desc"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "personal_service-para1"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "personal_service-para2"
+
+
+
+Spree::PageContent.find_or_create_by! title: "Delivery", description: "", slug: "delivery-main_heading-desc"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "delivery-para1"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "delivery-para2"
+
+
+Spree::PageContent.find_or_create_by! title: "Black Line Exchanges and Returns", description: "", slug: "exchange_returns-main_heading-desc"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "exchange_returns-para1"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "exchange_returns-para2"
+
+
+
+
+
+Spree::PageContent.find_or_create_by! title: "Black Line Security", description: "", slug: "security-main_heading-desc"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "security-para1"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "security-para2"
+
+
+
+
+Spree::PageContent.find_or_create_by! title: "Black Line Cookie Policy", description: "", slug: "cookie-main_heading-desc"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "cookie-para1"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "cookie-para2"
+
+
+
+Spree::PageContent.find_or_create_by! title: "Black Line Support", description: "", slug: "support-main_heading-desc"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "support-para1"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "support-para2"
+
+
+
+Spree::PageContent.find_or_create_by! title: "Black Line FAQ's", description: "", slug: "faqs-main_heading-desc"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "faqs-para1"
+Spree::PageContent.find_or_create_by! title: "", description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin profess", slug: "faqs-para2"
+
