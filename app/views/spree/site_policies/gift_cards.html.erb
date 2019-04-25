@@ -1,12 +1,2 @@
-<div style="text-align: center;">
-	<h1><%= @gift_cards_main_content.try(:title)%></h1>
-	<p>
-		<%= @gift_cards_para1_content.try(:description)%>
-	</p>
-
-	<hr>
-	<p>
-	<%= @gift_cards_para2_content.try(:description)%>
-	</p>
-</div>
-
+<% lang = I18n.locale %>
+<%= render template: "spree/#{lang.present? ? lang.to_s : DEFAULT_VIEW_LANG}/site_policies/gift_cards" %>
