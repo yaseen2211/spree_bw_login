@@ -1,3 +1,4 @@
+
 <% store_request_contents     = Spree::PageContent.from_gen_slug('store-request') %>
 <% store_request_label_contents = store_request_contents.from_gen_slug('store-request-label') %>
 <% store_request_main_contents = store_request_contents.from_gen_slug('store-request-main') %>
@@ -5,7 +6,6 @@
 <% store_top_content = store_request_main_contents .spec_slug('store-request-main-heading-desc').last%>
 <% store_request_benifits_content  = store_request_label_contents.spec_slug('store-request-label-benifits').last%>
 <% store_request_advertsment_label = store_request_label_contents.spec_slug('store-request-label-advertisement').last%>
-
 
 <div class="clearfix"></div>
 
@@ -34,7 +34,7 @@
       
 
 
-      <%= form_with(model: @spree_store_request, local: true,html: {class: "needs-validation news_frm my-frm-rgi str-form modo", novalidate: true }) do |form| %>
+      <%= form_with(model: @spree_store_request, local: true,html: {id: "store_form",class: "needs-validation news_frm my-frm-rgi str-form modo", novalidate: true }) do |form| %>
 
         <%= render partial: 'spree/en/store_requests/form',  locals: {form: form}%>
      
