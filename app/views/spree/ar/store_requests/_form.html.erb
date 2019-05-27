@@ -10,7 +10,7 @@
   
   <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
     <label for="validationCustom02">ﻦﻔﺴﻟﺍ </label>
-    <%= form.email_field :contact_email_address , class: "form-control", id: "validationCustom02",placeholder: "أبوظبي. ومن خلال الشراكة مع", required: true%>       
+    <%= form.email_field :contact_email_address , class: "form-control email_val", id: "validationCustom02",placeholder: "أبوظبي. ومن خلال الشراكة مع", required: true%>
   </div>
   
   <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
@@ -92,6 +92,22 @@
       <%#= form.file_field :store_list_image , class: "form-control"%>
     </div> -->
   <!-- </div> -->
-
+<script>
+    $('.btn-sub-frm').attr("disabled",true)
+    $('.email_val').focusout(function () {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!re.test($(this).val().toLowerCase())){
+            $('#error_msg').remove();
+            $('.email_val').html('').after('<span id="error_msg" style="color: red;"> Invalid Email Format</span>')
+            $('.email_val').css("border","red 1px solid");
+            $('.btn-sub-frm').attr("disabled",true);
+        }
+        else {
+            $('#error_msg').remove();
+            $('.btn-sub-frm').attr("disabled",false);
+            $('.email_val').css("border","");
+        }
+    });
+</script>
   
 
