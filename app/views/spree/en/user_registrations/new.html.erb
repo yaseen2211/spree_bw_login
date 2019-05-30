@@ -116,11 +116,21 @@
     
     <div class="culpa">
     <ul class="non-dv">
+    <% if register_benifits_para1_content.title.present? %>
       <li><%= register_benifits_para1_content.try(:title)%></li>
-      <li><%= register_benifits_para2_content.try(:title)%></li>
-      <li><%= register_benifits_para3_content.try(:title)%></li>
-      <li><%= register_benifits_para4_content.try(:title)%></li>
-      <li><%= register_benifits_para5_content.try(:title)%></li>
+     <%end %>
+    <% if register_benifits_para2_content.title.present? %>
+    <li><%= register_benifits_para2_content.try(:title)%></li>
+     <% end %>
+    <% if register_benifits_para3_content.title.present? %>
+    <li><%= register_benifits_para3_content.try(:title)%></li>
+    <% end %>
+    <% if register_benifits_para4_content.title.present? %>
+    <li><%= register_benifits_para4_content.try(:title)%></li>
+    <% end %>
+    <% if register_benifits_para5_content.title.present? %>
+    <li><%= register_benifits_para5_content.try(:title)%></li>
+    <% end %>
     </ul>
     </div>
   
