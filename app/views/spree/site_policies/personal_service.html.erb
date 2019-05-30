@@ -1,12 +1,4 @@
-<div style="text-align: center;">
-	<h1><%= @personal_service_main_content.try(:title)%></h1>
-	<p>
-		<%= @personal_service_para1_content.try(:description)%>
-	</p>
+<% lang = I18n.locale %>
+<%= render template: "spree/#{lang.present? ? lang.to_s : DEFAULT_VIEW_LANG}/site_policies/personal_service" %>
 
-	<hr>
-	<p>
-	<%= @personal_service_para2_content.try(:description)%>
-	</p>
-</div>
 
