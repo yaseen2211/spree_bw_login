@@ -22,12 +22,12 @@
 
 
 
-<% store_request_benifits_content1  = register_label_contents2.spec_slug('register-member-label-1').last%>
-<% store_request_benifits_content2  = register_label_contents2.spec_slug('register-member-label-2').last%>
-<% store_request_benifits_content3  = register_label_contents2.spec_slug('register-member-label-3').last%>
-<% store_request_benifits_content4  = register_label_contents2.spec_slug('register-member-label-4').last%>
-<% store_request_benifits_content5  = register_label_contents2.spec_slug('register-member-label-5').last%>
-<% store_request_benifits_content6  = register_label_contents2.spec_slug('register-member-label-6').last%>
+<% user_request_benifits_content1  = register_label_contents2.spec_slug('register-member-label-1').last%>
+<% user_request_benifits_content2  = register_label_contents2.spec_slug('register-member-label-2').last%>
+<% user_request_benifits_content3  = register_label_contents2.spec_slug('register-member-label-3').last%>
+<% user_request_benifits_content4  = register_label_contents2.spec_slug('register-member-label-4').last%>
+<% user_request_benifits_content5  = register_label_contents2.spec_slug('register-member-label-5').last%>
+<% user_request_benifits_content6  = register_label_contents2.spec_slug('register-member-label-6').last%>
 
 
 
@@ -121,23 +121,23 @@
 
     <div class="culpa">
     <ul class="non-dv">
-      <% if store_request_benifits_content1.title.present? %>
-        <li><%= store_request_benifits_content1.title%></li>
+      <% if user_request_benifits_content1.present? && user_request_benifits_content1.title.present? %>
+        <li><%= user_request_benifits_content1.title%></li>
       <%end %>
-      <% if store_request_benifits_content2.present? %>
-        <li><%= store_request_benifits_content2.title%></li>
+      <% if user_request_benifits_content2.present? && user_request_benifits_content2.present? %>
+        <li><%= user_request_benifits_content2.title%></li>
       <% end %>
-      <% if store_request_benifits_content3.title.present? %>
-        <li><%= store_request_benifits_content3.title%></li>
+      <% if user_request_benifits_content3.present? && user_request_benifits_content3.title.present? %>
+        <li><%= user_request_benifits_content3.title%></li>
       <% end %>
-      <% if store_request_benifits_content4.title.present? %>
-        <li><%= store_request_benifits_content4.title%></li>
+      <% if user_request_benifits_content4.present? && user_request_benifits_content4.title.present? %>
+        <li><%= user_request_benifits_content4.title%></li>
       <% end %>
-      <% if store_request_benifits_content5.title.present? %>
-        <li><%=store_request_benifits_content5.title%></li>
+      <% if user_request_benifits_content5.present? && user_request_benifits_content5.title.present? %>
+        <li><%=user_request_benifits_content5.title%></li>
       <% end %>
-      <% if store_request_benifits_content6.title.present? %>
-        <li><%= store_request_benifits_content6.title%></li>
+      <% if user_request_benifits_content6.present? && user_request_benifits_content6.title.present? %>
+        <li><%= user_request_benifits_content6.title%></li>
       <% end %>
     </ul>
     </div>
