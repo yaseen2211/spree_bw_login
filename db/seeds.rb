@@ -24,11 +24,11 @@ Spree::PageContent.find_or_create_by! title: " Just Some of the benifits  For St
 
 
 Spree::PageContent.find_or_create_by! title: "Secure online payment, omni channel platform, technical solutions that compliment your brand", description: "", slug: "register-store-label-1"
-Spree::PageContent.find_or_create_by! title: "More sales, less hassle", description: "", slug: "register-store-label--2"
-Spree::PageContent.find_or_create_by! title: "Global reach", description: "", slug: "register-store-label--3"
-Spree::PageContent.find_or_create_by! title: "Increased brand awareness", description: "", slug: "register-store-label--4"
-Spree::PageContent.find_or_create_by! title: "Simple order management and customer communication", description: "", slug: "register-store-label--5"
-Spree::PageContent.find_or_create_by! title: "Maintain your uniqueness", description: "", slug: "register-store-label--6"
+Spree::PageContent.find_or_create_by! title: "More sales, less hassle", description: "", slug: "register-store-label-2"
+Spree::PageContent.find_or_create_by! title: "Global reach", description: "", slug: "register-store-label-3"
+Spree::PageContent.find_or_create_by! title: "Increased brand awareness", description: "", slug: "register-store-label-4"
+Spree::PageContent.find_or_create_by! title: "Simple order management and customer communication", description: "", slug: "register-store-label-5"
+Spree::PageContent.find_or_create_by! title: "Maintain your uniqueness", description: "", slug: "register-store-label-6"
 
 
 Spree::PageContent.find_or_create_by! title: "Thanks, We'll Be In Touch Soon", description: "", slug: "store-request-message-main-heading-desc"

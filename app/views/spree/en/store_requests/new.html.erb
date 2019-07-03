@@ -4,13 +4,21 @@
   }
 </style>
 <% store_request_contents     = Spree::PageContent.from_gen_slug('store-request') %>
-<% store_request_label_contents = store_request_contents.from_gen_slug('store-request-label') %>
-<% store_request_label_contents2 = Spree::PageContent.from_gen_slug('register-store-label') %>
+<% store_request_label_contents_image = store_request_contents.from_gen_slug('store-request-label') %>
+<% store_request_label_contents = Spree::PageContent.from_gen_slug('register-store-label') %>
+
+<% store_request_label_contents1 = store_request_label_contents.from_gen_slug('register-store-label-1').last %>
+<% store_request_label_contents2 = store_request_label_contents.from_gen_slug('register-store-label-2').last %>
+<% store_request_label_contents3 = store_request_label_contents.from_gen_slug('register-store-label-3').last %>
+<% store_request_label_contents4 = store_request_label_contents.from_gen_slug('register-store-label-4').last %>
+<% store_request_label_contents5 = store_request_label_contents.from_gen_slug('register-store-label-5').last %>
+<% store_request_label_contents6 = store_request_label_contents.from_gen_slug('register-store-label-6').last %>
+<%  %>
 <% store_request_main_contents = store_request_contents.from_gen_slug('store-request-main') %>
 
 <% store_top_content = store_request_main_contents .spec_slug('store-request-main-heading-desc').last%>
-<% store_request_benifits_content  = store_request_label_contents.spec_slug('store-request-label-benifits').last%>
-<% store_request_advertsment_label = store_request_label_contents.spec_slug('store-request-label-advertisement').last%>
+<% store_request_benifits_content  = store_request_label_contents_image.spec_slug('store-request-label-benifits').last%>
+<% store_request_advertsment_label = store_request_label_contents_image.spec_slug('store-request-label-advertisement').last%>
 
 <div class="clearfix"></div>
 
@@ -92,15 +100,15 @@
       <% end%>
 
     </div>
-    
+    <% binding.pry %>
     <div class="culpa">
       <ul class="non-dv">
-        <li><%= store_request_label_contents2[0].try(:title)%></li>
-        <li><%= store_request_label_contents2[1].try(:title)%></li>
-        <li><%= store_request_label_contents2[2].try(:title)%></li>
-        <li><%= store_request_label_contents2[3].try(:title)%></li>
-        <li><%= store_request_label_contents2[4].try(:title)%></li>
-        <li><%= store_request_label_contents2[5].try(:title)%></li>
+        <li><%= store_request_label_contents1.try(:title)%></li>
+        <li><%= store_request_label_contents2.try(:title)%></li>
+        <li><%= store_request_label_contents3.try(:title)%></li>
+        <li><%= store_request_label_contents4.try(:title)%></li>
+        <li><%= store_request_label_contents5.try(:title)%></li>
+        <li><%= store_request_label_contents6.try(:title)%></li>
       </ul>
     </div>
   </div>
