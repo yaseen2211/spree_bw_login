@@ -1,4 +1,4 @@
-Spree::PageContent.find_or_create_by! title: "Register Your Black-Line Account Now", description: "", slug: "register-main-heading-desc"
+Spree::PageContent.find_or_create_by! title: "Register Your Black-Line Account Now", description: "Create a Black-Line account and to enjoy these benefits and many more", slug: "register-main-heading-desc"
 
 Spree::PageContent.find_or_create_by! title: "Join our mailing list", description: "", slug: "register-label-mailig-list"
 Spree::PageContent.find_or_create_by! title: "To find out more about our Privacy Policy", description: "", slug: "register-label-privacy"
@@ -19,6 +19,17 @@ Spree::PageContent.find_or_create_by! title: "Advertisement", description: "", s
 Spree::PageContent.find_or_create_by! title: "Make Your Digital Home Black Line Now", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer ", slug: "store-request-main-heading-desc"
 Spree::PageContent.find_or_create_by! title: "Advertisement", description: "", slug: "store-request-label-advertisement"
 Spree::PageContent.find_or_create_by! title: " Just Some of the benifits  For Store Request", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum h", slug: "store-request-label-benifits"
+
+
+
+
+Spree::PageContent.find_or_create_by! title: "Secure online payment, omni channel platform, technical solutions that compliment your brand", description: "", slug: "register-store-label-1"
+Spree::PageContent.find_or_create_by! title: "More sales, less hassle", description: "", slug: "register-store-label--2"
+Spree::PageContent.find_or_create_by! title: "Global reach", description: "", slug: "register-store-label--3"
+Spree::PageContent.find_or_create_by! title: "Increased brand awareness", description: "", slug: "register-store-label--4"
+Spree::PageContent.find_or_create_by! title: "Simple order management and customer communication", description: "", slug: "register-store-label--5"
+Spree::PageContent.find_or_create_by! title: "Maintain your uniqueness", description: "", slug: "register-store-label--6"
+
 
 Spree::PageContent.find_or_create_by! title: "Thanks, We'll Be In Touch Soon", description: "", slug: "store-request-message-main-heading-desc"
 Spree::PageContent.find_or_create_by! title: "", description: ", thank you for registering your interest in being on our Marketplace.If you provided your email address we sent you an email confirming your interest.", slug: "store-request-message-paragraph-1"
@@ -46,6 +57,19 @@ Spree::PageContent.find_or_create_by! title: "Forgotten Password", description: 
 Spree::PageContent.find_or_create_by! title: "Email Address", description: "", slug: "forgot-label-email-address"
 Spree::PageContent.find_or_create_by! title: "Submit", description: "", slug: "forgot-label-btn-submit"
 Spree::PageContent.find_or_create_by! title: "Advertisement", description: "", slug: "forgot-label-advertisement"
+
+
+
+
+Spree::PageContent.find_or_create_by! title: "Speedy checkout of your custom Abaya", description: "", slug: "register-member-label-1"
+Spree::PageContent.find_or_create_by! title: "Simple order management, communication with designers and order notifications", description: "", slug: "register-member-label-2"
+Spree::PageContent.find_or_create_by! title: "Create and save wish lists for Abayas you love", description: "", slug: "register-member-label-3"
+Spree::PageContent.find_or_create_by! title: "Receive invites to sales, offers and more", description: "", slug: "register-member-label-4"
+Spree::PageContent.find_or_create_by! title: "Be the first to know when new items arrive from your favourite designers once you register your account, be sure to save your measurments.", description: "", slug: "register-member-label-5"
+Spree::PageContent.find_or_create_by! title: "This will make is simple for you to purchase tailor-made Abaya's without the need to travel", description: "", slug: "register-member-label-6"
+
+
+
 
 
 Spree::PageContent.find_or_create_by! title: "Lorem ipsum dolor sit amet", description: "", slug: "register-label-benifits-para-1"

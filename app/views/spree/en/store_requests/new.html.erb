@@ -1,6 +1,11 @@
-
+<style>
+  .help-block{
+    color: red;
+  }
+</style>
 <% store_request_contents     = Spree::PageContent.from_gen_slug('store-request') %>
 <% store_request_label_contents = store_request_contents.from_gen_slug('store-request-label') %>
+<% store_request_label_contents2 = Spree::PageContent.from_gen_slug('register-store-label') %>
 <% store_request_main_contents = store_request_contents.from_gen_slug('store-request-main') %>
 
 <% store_top_content = store_request_main_contents .spec_slug('store-request-main-heading-desc').last%>
@@ -90,8 +95,12 @@
     
     <div class="culpa">
       <ul class="non-dv">
-        <li><%= store_request_benifits_content.try(:title)%></li>
-        <li><%= store_request_benifits_content.try(:description)%> </li>
+        <li><%= store_request_label_contents2[0].try(:title)%></li>
+        <li><%= store_request_label_contents2[1].try(:title)%></li>
+        <li><%= store_request_label_contents2[2].try(:title)%></li>
+        <li><%= store_request_label_contents2[3].try(:title)%></li>
+        <li><%= store_request_label_contents2[4].try(:title)%></li>
+        <li><%= store_request_label_contents2[5].try(:title)%></li>
       </ul>
     </div>
   </div>
@@ -114,7 +123,52 @@
     </div>
   </div>
 <% end%>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
 
-
-
-
+<script>
+    $('#store_form').bootstrapValidator({
+        // feedbackIcons: {
+        //     valid: 'glyphicon glyphicon-ok',
+        //     invalid: 'glyphicon glyphicon-remove',
+        //     validating: 'glyphicon glyphicon-refresh'
+        // },
+        fields: {
+            'store_request[contact_name]': {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your contact name'
+                    }
+                }
+            },
+            'store_request[contact_number]': {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your contact number'
+                    }
+                }
+            },
+            'store_request[store_name]': {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your brands name'
+                    }
+                }
+            },
+            'store_request[contact_email_address]': {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your email address'
+                    }
+                }
+            },
+            'store_request[store_web_url]': {
+                validators: {
+                    regexp: {
+                        regexp: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
+                        message: 'Please enter a valid website url'
+                    }
+                }
+            }
+        }
+    });
+</script>
