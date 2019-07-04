@@ -1,11 +1,24 @@
-
+<style>
+  .help-block{
+    color: red;
+  }
+</style>
 <% store_request_contents     = Spree::PageContent.from_gen_slug('store-request') %>
-<% store_request_label_contents = store_request_contents.from_gen_slug('store-request-label') %>
+<% store_request_label_contents_image = store_request_contents.from_gen_slug('store-request-label') %>
+<% store_request_label_contents = Spree::PageContent.from_gen_slug('register-store-label') %>
+
+<% store_request_label_contents1 = store_request_label_contents.from_gen_slug('register-store-label-1').last %>
+<% store_request_label_contents2 = store_request_label_contents.from_gen_slug('register-store-label-2').last %>
+<% store_request_label_contents3 = store_request_label_contents.from_gen_slug('register-store-label-3').last %>
+<% store_request_label_contents4 = store_request_label_contents.from_gen_slug('register-store-label-4').last %>
+<% store_request_label_contents5 = store_request_label_contents.from_gen_slug('register-store-label-5').last %>
+<% store_request_label_contents6 = store_request_label_contents.from_gen_slug('register-store-label-6').last %>
+
 <% store_request_main_contents = store_request_contents.from_gen_slug('store-request-main') %>
 
 <% store_top_content = store_request_main_contents .spec_slug('store-request-main-heading-desc').last%>
-<% store_request_benifits_content  = store_request_label_contents.spec_slug('store-request-label-benifits').last%>
-<% store_request_advertsment_label = store_request_label_contents.spec_slug('store-request-label-advertisement').last%>
+<% store_request_benifits_content  = store_request_label_contents_image.spec_slug('store-request-label-benifits').last%>
+<% store_request_advertsment_label = store_request_label_contents_image.spec_slug('store-request-label-advertisement').last%>
 
 <div class="clearfix"></div>
 
@@ -87,11 +100,14 @@
       <% end%>
 
     </div>
-    
     <div class="culpa">
       <ul class="non-dv">
-        <li><%= store_request_benifits_content.try(:title)%></li>
-        <li><%= store_request_benifits_content.try(:description)%> </li>
+        <li><%= store_request_label_contents1.try(:title)%></li>
+        <li><%= store_request_label_contents2.try(:title)%></li>
+        <li><%= store_request_label_contents3.try(:title)%></li>
+        <li><%= store_request_label_contents4.try(:title)%></li>
+        <li><%= store_request_label_contents5.try(:title)%></li>
+        <li><%= store_request_label_contents6.try(:title)%></li>
       </ul>
     </div>
   </div>
@@ -113,8 +129,54 @@
       </div>
     </div>
   </div>
-<%# end%>
+<% #end%>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
 
-
- -->
+<script>
+    $('#store_form').bootstrapValidator({
+        // feedbackIcons: {
+        //     valid: 'glyphicon glyphicon-ok',
+        //     invalid: 'glyphicon glyphicon-remove',
+        //     validating: 'glyphicon glyphicon-refresh'
+        // },
+        fields: {
+            'store_request[contact_name]': {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your contact name'
+                    }
+                }
+            },
+            'store_request[contact_number]': {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your contact number'
+                    }
+                }
+            },
+            'store_request[store_name]': {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your brands name'
+                    }
+                }
+            },
+            'store_request[contact_email_address]': {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your email address'
+                    }
+                }
+            },
+            'store_request[store_web_url]': {
+                validators: {
+                    regexp: {
+                        regexp: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/,
+                        message: 'Please enter a valid website url'
+                    }
+                }
+            }
+        }
+    });
+</script>
 
