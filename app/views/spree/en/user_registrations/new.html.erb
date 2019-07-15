@@ -2,30 +2,34 @@
 
 <% register_contents     = Spree::PageContent.from_gen_slug('register') %>
 
-<% register_label_contents = register_contents.from_gen_slug('register-label') %>
+<% register_label_contents_image = register_contents.from_gen_slug('register-label') %>
+<% register_label_contents = register_contents.from_gen_slug('register-member-label') %>
 <% register_btn_label_contents = register_contents.from_gen_slug('register-btn-label') %>
 <% register_main_contents = register_contents.from_gen_slug('register-main') %>
 <% register_top_content = register_main_contents.spec_slug('register-main-heading-desc').last%>
-<% register_mailing_content = register_label_contents.spec_slug('register-label-mailig-list').last%>
-<% register_policy_content = register_label_contents.spec_slug('register-label-privacy').last%>
-<% register_terms_content = register_label_contents.spec_slug('register-label-terms').last%>
-<% register_account_content = register_label_contents.spec_slug('register-label-login').last%>
-<% register_benifits_content = register_label_contents.spec_slug('register-label-benifits').last%>
+<% register_mailing_content = register_label_contents_image.spec_slug('register-label-mailig-list').last%>
+<% register_policy_content = register_label_contents_image.spec_slug('register-label-privacy').last%>
+<% register_terms_content = register_label_contents_image.spec_slug('register-label-terms').last%>
+<% register_account_content = register_label_contents_image.spec_slug('register-label-login').last%>
+<% register_benifits_content = register_label_contents_image.spec_slug('register-label-benifits').last%>
 <% register_privacy_btn_content = register_btn_label_contents.spec_slug('register-btn-label-privacy').last%>
 <% register_account_btn_content = register_btn_label_contents.spec_slug('register-btn-label-account').last%>
 <% register_terms_btn_content = register_btn_label_contents.spec_slug('register-btn-label-terms').last%>
 <% register_login_btn_content = register_btn_label_contents.spec_slug('register-btn-label-login').last%>
 <% register_facebook_btn_content = register_btn_label_contents.spec_slug('register-btn-label-facebook').last%>
 <% register_google_btn_content = register_btn_label_contents.spec_slug('register-btn-label-google').last%>
-<% register_advertsment_label = register_label_contents.spec_slug('register-label-advertisement').last%>
+<% register_advertsment_label = register_label_contents_image.spec_slug('register-label-advertisement').last%>
 
 
 
-<% register_benifits_para1_content = register_label_contents.spec_slug('register-label-benifits-para-1').last%>
-<% register_benifits_para2_content = register_label_contents.spec_slug('register-label-benifits-para-2').last%>
-<% register_benifits_para3_content = register_label_contents.spec_slug('register-label-benifits-para-3').last%>
-<% register_benifits_para4_content = register_label_contents.spec_slug('register-label-benifits-para-4').last%>
-<% register_benifits_para5_content = register_label_contents.spec_slug('register-label-benifits-para-5').last%>
+<% user_request_benifits_content1  = register_label_contents.spec_slug('register-member-label-1').last%>
+<% user_request_benifits_content2  = register_label_contents.spec_slug('register-member-label-2').last%>
+<% user_request_benifits_content3  = register_label_contents.spec_slug('register-member-label-3').last%>
+<% user_request_benifits_content4  = register_label_contents.spec_slug('register-member-label-4').last%>
+<% user_request_benifits_content5  = register_label_contents.spec_slug('register-member-label-5').last%>
+<% user_request_benifits_content6  = register_label_contents.spec_slug('register-member-label-6').last%>
+
+
 
 
 <div class="clearfix"></div>
@@ -34,13 +38,14 @@
 
 <div class="container">
   <div class="register_my_dv">
-  
+
   <div class="main_register_title">
   <h2><%= register_top_content.try(:title) %></h2>
+  <p><%= register_top_content.try(:description) %></p>
   </div>
-  
+
  <div class="reg-my-account">
- 
+
   <div class="col-lg-6 col-md-6 col-sm-6 my-wrd">
 
 
@@ -49,17 +54,17 @@
 
 
       <%= render :partial => 'spree/en/shared/user_form', :locals => { :f => f } %>
-      
-     
+
+
       <div class="form-group col-md-12 col-sm-12 col-lg-12 fin_st p-0" >
           <div class="form-check item-set-con" id="user-subscribe-container">
-           
+
             <%= f.check_box :subscribed, class: "form-check-input" %>
             <p class="">
              <%= register_mailing_content.try(:title)%><br>
              <%= register_policy_content.try(:title)%> <%= link_to register_privacy_btn_content.try(:title) , privacy_policies_path,target: "_blank", class: "pol-out"%>
             </p>
-            
+
           </div>
         </div>
 
@@ -67,8 +72,8 @@
         <div class="elit text-center yrt-input">
           <%= f.submit register_account_btn_content.try(:title), :class => 'btn btn-primary btn-sm btn-sub-frm' %>
         </div>
-        
-        
+
+
         <div class="form-group col-md-12 col-sm-12 col-lg-12 fin_st p-0">
           <div class="form-check item-set-con">
             <p class="form-check-label clk_mt">
@@ -78,7 +83,7 @@
             </p>
           </div>
         </div>
-      
+
     <% end %>
 
 
@@ -98,11 +103,11 @@
  </ul>
   </div>
  </div>
- 
- 
- 
+
+
+
   <div class="col-lg-6 col-md-6 col-sm-6 just-sm">
-  
+
     <div class="img-reg">
       <%if register_benifits_content.image.attached? %>
         <%= image_tag(main_app.url_for(register_benifits_content.image.variant(resize: '401x145'))) %>
@@ -113,33 +118,24 @@
 
     <%#= register_benifits_content.try(:title)%>
     <%#= register_benifits_content.try(:description)%>
-    
+
     <div class="culpa">
     <ul class="non-dv">
-    <% if register_benifits_para1_content.present? && register_benifits_para1_content.title.present? %>
-      <li><%= register_benifits_para1_content.try(:title)%></li>
-     <%end %>
-    <% if register_benifits_para2_content.present? && register_benifits_para2_content.title.present? %>
-    <li><%= register_benifits_para2_content.try(:title)%></li>
-     <% end %>
-    <% if register_benifits_para3_content.present? && register_benifits_para3_content.title.present? %>
-    <li><%= register_benifits_para3_content.try(:title)%></li>
-    <% end %>
-    <% if register_benifits_para4_content.present? && register_benifits_para4_content.title.present? %>
-    <li><%= register_benifits_para4_content.try(:title)%></li>
-    <% end %>
-    <% if register_benifits_para5_content.present? && register_benifits_para5_content.title.present? %>
-    <li><%= register_benifits_para5_content.try(:title)%></li>
-    <% end %>
+        <li><%= user_request_benifits_content1.try(:title)%></li>
+        <li><%= user_request_benifits_content2.try(:title)%></li>
+        <li><%= user_request_benifits_content3.try(:title)%></li>
+        <li><%= user_request_benifits_content4.try(:title)%></li>
+        <li><%=user_request_benifits_content5.try(:title)%></li>
+        <li><%= user_request_benifits_content6.try(:title)%></li>
     </ul>
     </div>
-  
+
  </div>
- 
+
  </div>
-  
+
   </div>
-  
+
 </div>
 
 <!--<div class="clearfix"></div>-->

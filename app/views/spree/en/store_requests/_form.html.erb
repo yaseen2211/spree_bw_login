@@ -1,21 +1,21 @@
 
 <div class="form-row">
   <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
-    <label for="validationCustom01">Contact Name</label>
-    <%= form.text_field :contact_name , class: "form-control",id: "validationCustom01", placeholder: "Enter Your Contact Name*", required: true%>   
+    <label for="validationCustom01">Contact Name *</label>
+    <%= form.text_field :contact_name , class: "form-control",id: "validationCustom01", placeholder: "Enter Your Contact Name*", required: true%>
   </div>
   <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
-    <label for="validationCustom02">Contact Number</label>
+    <label for="validationCustom02">Contact Number *</label>
     <%= form.number_field :contact_number, class: "form-control",id: "validationCustom02", placeholder: "Provide a Contact Number*", required: true %>    
   </div>
   
   <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
-    <label for="validationCustom02">Emails</label>
-    <%= form.email_field :contact_email_address , class: "form-control email_val", id: "validationCustom02",placeholder: "Enter Your Email Address *", required: true%>
+    <label for="validationCustom02">Email*</label>
+    <%= form.email_field :contact_email_address , class: "form-control email_val", id: "validationCustom02",placeholder: "Enter Your Email Address", required: true%>
   </div>
   
   <div class="col-md-12 col-lg-12 col-sm-12 mb-3 p-0">
-    <label for="validationCustom02">Store Name / Brand</label>
+    <label for="validationCustom02">Store Name / Brand *</label>
     <%= form.text_field :store_name, class: "form-control", id: "validationCustom02", placeholder: "Tell Us The Name of Your Store or Brand*" , required: true%>    
   </div>
   
@@ -94,22 +94,24 @@
       <%#= form.file_field :store_list_image , class: "form-control"%>
     </div> -->
   <!-- </div> -->
-<script>
-    $('.btn-sub-frm').attr("disabled",true)
-  $('.email_val').focusout(function () {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if (!re.test($(this).val().toLowerCase())){
-          $('#error_msg').remove();
-          $('.email_val').html('').after('<span id="error_msg" style="color: red;"> Invalid Email Format</span>')
-          $('.email_val').css("border","red 1px solid");
-          $('.btn-sub-frm').attr("disabled",true);
-      }
-      else {
-          $('#error_msg').remove();
-          $('.btn-sub-frm').attr("disabled",false);
-          $('.email_val').css("border","");
-      }
-  });
-</script>
+<!--<script>-->
+<!--    $('.btn-sub-frm').attr("disabled",true)-->
+<!--  $('.email_val').focusout(function () {-->
+<!--      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;-->
+<!--      if (!re.test($(this).val().toLowerCase())){-->
+<!--          $('#error_msg').remove();-->
+<!--          $('.email_val').html('').after('<span id="error_msg" style="color: red; font-size: 8px;"> Please enter a valid email address</span>')-->
+<!--          $('.email_val').css("border","red 1px solid");-->
+<!--          $('.btn-sub-frm').attr("disabled",true);-->
+<!--      }-->
+<!--      else {-->
+<!--          $('.email_val').html('');-->
+<!--          $('#error_msg').remove();-->
+<!--          $('.btn-sub-frm').attr("disabled",false);-->
+<!--          $('.email_val').css("border","");-->
+<!--      }-->
+<!--  });-->
+<!--</script>-->
+
   
 
