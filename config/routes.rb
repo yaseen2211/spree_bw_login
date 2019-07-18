@@ -18,6 +18,8 @@ Spree::Core::Engine.add_routes do
 
   get '/registeration/select-type', :to => 'store_requests#registeration_select_type', as: 'register_type'
 
+  get '/store-invitation', :to => 'store_requests#store_invitation', as: 'store_invitation'
+
 end
 
 
