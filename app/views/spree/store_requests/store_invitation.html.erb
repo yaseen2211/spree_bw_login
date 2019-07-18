@@ -112,7 +112,7 @@ Once your store is live, customers from around the world will be able to purch
 
 <div class="get-invitation-start">
 <h4 class="page-heading">GET STARTED TODAY</h4>
-<a href="register-my-store-en.html"><button class="button-body btn-inv-s">REGISTER HERE</button></a>
+<a href="<%=new_store_request_path%>"><button class="button-body btn-inv-s js-register-store-btn">REGISTER HERE</button></a>
 </div>
 
 </div>
@@ -137,3 +137,14 @@ Once your store is live, customers from around the world will be able to purch
   </div>
 </div> -->
 <!--- advertise ment section end--->
+
+<script type="text/javascript">
+	$('body').on("click", ".js-register-store-btn", function(e) {
+		ga('send', {
+		  hitType: 'event',
+		  eventCategory: 'Button',
+		  eventAction: 'Click',
+		  eventLabel: 'Register Here'
+		});
+	});
+</script>
