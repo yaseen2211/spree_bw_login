@@ -2,28 +2,6 @@
   .help-block{
     color: red;
   }
-
-  /* .rc-anchor-content{*/
-  /*  background-color: red !important;*/
-  /*  width: 55% !important;*/
-  /*  height: 74px;*/
-  /*}*/
-
-  /*.rc-anchor-normal .rc-anchor-pt {*/
-  /*  margin: 2px 13px 0 0;*/
-  /*  padding-right: 72px !important;*/
-  /*  position: absolute;*/
-  /*  right: 0px;*/
-  /*  text-align: right;*/
-  /*  width: 276px;*/
-  /*}*/
-  /*.rc-anchor-light.rc-anchor-normal {*/
-  /*  border: 1px solid #d3d3d3;*/
-  /*  width: 80% !important;*/
-  /*}*/
-  /*.str-form.g-recaptcha-outer.g-recaptcha{*/
-  /*    margin-bottom: 30px !important;*/
-  /*  }*/
 </style>
 
 <% store_request_contents     = Spree::PageContent.from_gen_slug('store-request') %>
@@ -64,7 +42,7 @@
 
         <%= render partial: 'spree/en/store_requests/form',  locals: {form: form}%>
      
-         <div class="form-group col-md-12 col-sm-12 col-lg-12 fin_st p-0">
+         <div class="form-group col-md-12 col-sm-12 col-lg-12 fin_st p-0" style="margin-bottom: 7px!important;">
           <div class="item-set-con" id="user-subscribe-container">
             <%= form.check_box :subscribed, class: "form-check-input" %>
             <p class="">
@@ -74,9 +52,9 @@
             
           </div>
         </div>
-          
-        <div class="form-group col-md-12 col-sm-12 col-lg-12 fin_st p-0 cdn-ln g-recaptcha-outer">
-          <%= recaptcha_tags style: 'margin-bottom: 25px;'%>
+
+        <div class="form-group col-md-12 col-sm-12 col-lg-12 p-0 cdn-ln g-recaptcha-outer">
+          <%= recaptcha_tags style: "transform:scale(0.80);-webkit-transform:scale(0.80);transform-origin:0 0;-webkit-transform-origin:0 0; margin-bottom: 7px;" %>
         </div>
         <div class="clearfix"></div>
         <div class="elit text-center yrt-input">
@@ -154,25 +132,20 @@
     <% end %>
     <% end %>
 </script>
+
+<script>
+    $('.btn-sub-frm').click(function (event) {
+        submitUserFormCaptcha();
+    })
+
+</script>
+
 <script type="text/javascript">
-  // $(document).ready(function () {
-  //     $('.rc-anchor-content').css('width','55% !improtant');
-  //     $('.rc-anchor-pt').css('padding-right','72px !improtant');
-  //     $('.g-recaptcha').css('margin-bottom','30px !improtant')
-  // })
-  // $('#store_form').submit(function (event) {
-  //     debugger;
-  //     if (grecaptcha.getResponse() == ""){
-  //         $('#captcha_error').remove();
-  //         $('.g-recaptcha').after('<p id="captcha_error" style="color: red; font-size: 60%;">please check recaptcha</p>');
-  //         if ($('#store_form')[0].checkValidity()){
-  //             event.preventDefault();
-  //             return false;
-  //         }
-  //         event.preventDefault();
-  //         return false;
-  //     }
-  // })
+  $(document).ready(function () {
+      $('.rc-anchor-content').css('width','55% !improtant');
+      $('.rc-anchor-pt').css('padding-right','72px !improtant');
+      $('.g-recaptcha').css('margin-bottom','30px !improtant')
+  })
     $('#store_form').bootstrapValidator({
         // feedbackIcons: {
         //     valid: 'glyphicon glyphicon-ok',

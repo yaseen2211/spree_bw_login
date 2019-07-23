@@ -56,7 +56,7 @@
       <%= render :partial => 'spree/en/shared/user_form', :locals => { :f => f } %>
 
 
-      <div class="form-group col-md-12 col-sm-12 col-lg-12 fin_st p-0" >
+      <div class="form-group col-md-12 col-sm-12 col-lg-12 fin_st p-0" style="margin-bottom: -7px!important;" >
           <div class="form-check item-set-con" id="user-subscribe-container">
 
             <%= f.check_box :subscribed, class: "form-check-input" %>
@@ -68,7 +68,7 @@
           </div>
         </div>
       <div class="col-md-12 col-sm-12 col-lg-12 cn_ry p-0">
-        <%= recaptcha_tags style: "padding-bottom: 25px;" %>
+        <%= recaptcha_tags style: "transform:scale(0.80);-webkit-transform:scale(0.80);transform-origin:0 0;-webkit-transform-origin:0 0; margin-bottom: 15px;" %>
       </div>
         <div class="clearfix"></div>
         <div class="elit text-center yrt-input">
@@ -137,6 +137,12 @@
   </div>
 
 </div>
+<script>
+    $('.btn-sub-frm').click(function (event) {
+        submitUserFormCaptcha();
+    })
+
+</script>
 
 <!--<div class="clearfix"></div>-->
 <%#if register_advertsment_label.image.attached? %>
