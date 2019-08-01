@@ -68,7 +68,7 @@
           </div>
         </div>
       <div class="col-md-12 col-sm-12 col-lg-12 cn_ry p-0">
-        <%= recaptcha_tags style: "transform:scale(0.82);-webkit-transform:scale(0.82);transform-origin:0 0;-webkit-transform-origin:0 0; margin-bottom: 15px;" %>
+        <%= recaptcha_tags callback:'removeError',style: "transform:scale(0.82);-webkit-transform:scale(0.82);transform-origin:0 0;-webkit-transform-origin:0 0; margin-bottom: 15px;" %>
       </div>
         <div class="clearfix"></div>
         <div class="elit text-center yrt-input">
@@ -138,14 +138,14 @@
 
 </div>
 <script>
-    $('.btn-sub-frm').click(function (event) {
-        $('#new_spree_user').submit();
+
+    $('#new_spree_user').submit(function () {
+        $('#captcha_error').remove();
         if (grecaptcha.getResponse() == ""){
             submitUserFormCaptcha();
             return false;
         }
     })
-
 </script>
 
 <!--<div class="clearfix"></div>-->
