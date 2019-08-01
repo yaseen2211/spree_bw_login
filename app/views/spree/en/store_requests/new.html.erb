@@ -134,7 +134,11 @@
 
 <script>
     $('.btn-sub-frm').click(function (event) {
-        submitUserFormCaptcha();
+        $('#store_form').submit();
+        if (grecaptcha.getResponse() == ""){
+            submitUserFormCaptcha();
+            return false;
+        }
     })
 
 </script>
